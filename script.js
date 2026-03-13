@@ -21,7 +21,7 @@
 // saudacao();
 // somar(21,21);
 
-function somarNumeros(){
+function somar_numeros(){
     let soma=0;
     let continuar=true;
 
@@ -39,5 +39,12 @@ function somarNumeros(){
     alert("A soma dos números é: "+soma);
     console.log("A soma dos números é: "+soma);
 }
+somar_numeros();
 
-somarNumeros();
+function contagem_regressiva(){
+    for(let i=10;i>0;i--){
+        alert(i);
+    }
+    alert("Lançamento realizado!");
+}
+contagem_regressiva();
