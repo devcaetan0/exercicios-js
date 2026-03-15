@@ -21,6 +21,7 @@ function somar(x,y){
 
 saudacao();
 somar(21,21);
+*/
 
 function somar_numeros(){
     let soma=0;
@@ -37,18 +38,14 @@ function somar_numeros(){
         continuar=confirm("Deseja adicionar mais um número?");
     }
     alert("A soma dos números é: "+soma);
-    console.log("A soma dos números é: "+soma);
 }
-somar_numeros();
 
 function contagem_regressiva(){
     for(let i=10;i>0;i--){
-        console.log(i);
+        alert(i)
     }
-    console.log("Lançamento realizado!");
+    alert("Lançamento realizado!");
 }
-contagem_regressiva();
-*/
 
 function calculo_financeiro(){
     let soma_ganhos=0;
@@ -67,4 +64,31 @@ function calculo_financeiro(){
     alert("Gasto anual: R$"+soma_gastos);
     alert("Saldo anual: R$"+saldo);
 }
-calculo_financeiro();
+
+function ordenacao_inteiros(){
+    let numeros=[];
+    let aux;
+    let trocou;
+
+    for(let i=0;i<4;i++){
+        numeros[i]=parseFloat(prompt("Dê o valor do "+(i+1)+"° número"));
+    }
+
+    do{
+        trocou=false;
+
+        for(let i=0;i<4;i++){
+            if(numeros[i]<numeros[i+1]){
+            aux=numeros[i];
+            numeros[i]=numeros[i+1];
+            numeros[i+1]=aux;
+            trocou=true;
+            }
+        }
+    }while(trocou==true);
+
+    alert("Em ordem decrescente, os números ficarão da seguinte forma:")
+    for(let i=0;i<4;i++){
+        alert(numeros[i]);
+    }
+}
