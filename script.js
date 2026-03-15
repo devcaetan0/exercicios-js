@@ -92,3 +92,17 @@ function ordenacao_inteiros(){
         alert(numeros[i]);
     }
 }
+
+function transformar_numero(){
+    let numero;
+
+    numero=parseFloat(prompt("Digite um número inteiro:"));
+
+    if(numero%2==0){
+        numero=numero+1;
+        alert("O número que tu escolheu era par, mas eu vou deixar ele ímpar: "+numero);
+    }else{
+        numero=numero+1;
+        alert("O número que tu escolheu era ímpar, mas vou deixar ele par: "+numero);
+    }
+}
