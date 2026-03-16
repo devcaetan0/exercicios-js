@@ -154,3 +154,23 @@ function sistema_picoles(){
         break;
     }
 }
+
+function operacoes(){
+    let n1=21;
+    let n2=67;
+
+    alert("Diferença: "+(n2-n1));
+    alert("O dobro da primeira somado ao triplo da segunda: "+((n1*2)+(n2*3)));
+    alert("Multiplicação: "+(n1*n2));
+}
+
+function ordenacao_numeros(){
+    let n1=67;
+    let n2=21;
+
+    if(n1>n2){
+        alert("Ordem decrescente: "+n1+", "+n2);
+    }else{
+        alert("Ordem decrescente: "+n2+", "+n1);
+    }
+}
