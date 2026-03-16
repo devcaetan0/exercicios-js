@@ -23,154 +23,165 @@ saudacao();
 somar(21,21);
 */
 
-function somar_numeros(){
-    let soma=0;
-    let continuar=true;
+function somar_numeros() {
+    let soma = 0;
+    let continuar = true;
 
-    while(continuar){
-        let numero=parseFloat(prompt("Digite um número. Digite 0 para encerrar: "));
+    while (continuar) {
+        let numero = parseFloat(prompt("Digite um número. Digite 0 para encerrar: "));
 
-        if(isNaN(numero)){
+        if (isNaN(numero)) {
             alert("Por favor, insira um número válido");
-        }else{
-            soma+=numero;
+        } else {
+            soma += numero;
         }
-        continuar=confirm("Deseja adicionar mais um número?");
+        continuar = confirm("Deseja adicionar mais um número?");
     }
-    alert("A soma dos números é: "+soma);
+    alert("A soma dos números é: " + soma);
 }
 
-function contagem_regressiva(){
-    for(let i=10;i>0;i--){
+function contagem_regressiva() {
+    for (let i = 10; i > 0; i--) {
         alert(i)
     }
     alert("Lançamento realizado!");
 }
 
-function calculo_financeiro(){
-    let soma_ganhos=0;
-    let soma_gastos=0;
+function calculo_financeiro() {
+    let soma_ganhos = 0;
+    let soma_gastos = 0;
 
-    for(let i=0;i<12;i++){
-        let ganhos_mes=parseFloat(prompt("Informe o ganho bruto do "+(i+1)+"° mês: "));
-        let gastos_mes=parseFloat(prompt("Informe o gasto total do "+(i+1)+"° mês: "));
+    for (let i = 0; i < 12; i++) {
+        let ganhos_mes = parseFloat(prompt("Informe o ganho bruto do " + (i + 1) + "° mês: "));
+        let gastos_mes = parseFloat(prompt("Informe o gasto total do " + (i + 1) + "° mês: "));
 
-        soma_ganhos+=ganhos_mes;
-        soma_gastos+=gastos_mes;
+        soma_ganhos += ganhos_mes;
+        soma_gastos += gastos_mes;
     }
-    let saldo=soma_ganhos-soma_gastos;
+    let saldo = soma_ganhos - soma_gastos;
 
-    alert("Ganho bruto anual: R$"+soma_ganhos);
-    alert("Gasto anual: R$"+soma_gastos);
-    alert("Saldo anual: R$"+saldo);
+    alert("Ganho bruto anual: R$" + soma_ganhos);
+    alert("Gasto anual: R$" + soma_gastos);
+    alert("Saldo anual: R$" + saldo);
 }
 
-function ordenacao_inteiros(){
-    let numeros=[];
+function ordenacao_inteiros() {
+    let numeros = [];
     let aux;
     let trocou;
 
-    for(let i=0;i<4;i++){
-        numeros[i]=parseFloat(prompt("Dê o valor do "+(i+1)+"° número"));
+    for (let i = 0; i < 4; i++) {
+        numeros[i] = parseFloat(prompt("Dê o valor do " + (i + 1) + "° número"));
     }
 
-    do{
-        trocou=false;
+    do {
+        trocou = false;
 
-        for(let i=0;i<4;i++){
-            if(numeros[i]<numeros[i+1]){
-            aux=numeros[i];
-            numeros[i]=numeros[i+1];
-            numeros[i+1]=aux;
-            trocou=true;
+        for (let i = 0; i < 4; i++) {
+            if (numeros[i] < numeros[i + 1]) {
+                aux = numeros[i];
+                numeros[i] = numeros[i + 1];
+                numeros[i + 1] = aux;
+                trocou = true;
             }
         }
-    }while(trocou==true);
+    } while (trocou == true);
 
     alert("Em ordem decrescente, os números ficarão da seguinte forma:")
-    for(let i=0;i<4;i++){
+    for (let i = 0; i < 4; i++) {
         alert(numeros[i]);
     }
 }
 
-function transformar_numero(){
+function transformar_numero() {
     let numero;
 
-    numero=parseFloat(prompt("Digite um número inteiro:"));
+    numero = parseFloat(prompt("Digite um número inteiro:"));
 
-    if(numero%2==0){
-        numero=numero+1;
-        alert("O número que tu escolheu era par, mas eu vou deixar ele ímpar: "+numero);
-    }else{
-        numero=numero+1;
-        alert("O número que tu escolheu era ímpar, mas vou deixar ele par: "+numero);
+    if (numero % 2 == 0) {
+        numero = numero + 1;
+        alert("O número que tu escolheu era par, mas eu vou deixar ele ímpar: " + numero);
+    } else {
+        numero = numero + 1;
+        alert("O número que tu escolheu era ímpar, mas vou deixar ele par: " + numero);
     }
 }
 
-function verifica_letra(){
+function verifica_letra() {
     let letra;
 
-    letra=prompt("Informe uma letra");
+    letra = prompt("Informe uma letra");
 
-    if(letra=="A" || letra=="E" || letra=="I" || letra=="O" || letra=="U"){
+    if (letra == "A" || letra == "E" || letra == "I" || letra == "O" || letra == "U") {
         alert("Sua letra é uma vogal!");
-    }else{
+    } else {
         alert("Sua letra é uma consoante!");
     }
 }
 
-function sistema_picoles(){
+function sistema_picoles() {
     let escolha;
 
-    escolha=prompt("Selecione o sabor da sua preferência:\nA - Chocolate\nB - Morango\nC - Creme\nD - Manga\nE - Melancia\nF - Vanilla Ice\nG - Céu Azul\nH - Brownie\nI - Hawaiano");
-    
-    switch(escolha){
+    escolha = prompt("Selecione o sabor da sua preferência:\nA - Chocolate\nB - Morango\nC - Creme\nD - Manga\nE - Melancia\nF - Vanilla Ice\nG - Céu Azul\nH - Brownie\nI - Hawaiano");
+
+    switch (escolha) {
         case "A":
             alert("Preço: R$1,50")
-        break;
+            break;
         case "B":
             alert("Preço: R$2,50");
-        break;
+            break;
         case "C":
             alert("Preço: R$2,50");
-        break;
+            break;
         case "D":
             alert("Preço: R$3,20");
-        break;
+            break;
         case "E":
             alert("Preço: R$3,40");
-        break;
+            break;
         case "F":
             alert("Preço: R$3,00");
-        break;
+            break;
         case "G":
             alert("Preço: R$3,60");
-        break;
+            break;
         case "H":
             alert("Preço: R$4,00");
-        break;
+            break;
         case "I":
             alert("Preço: R$5,00");
-        break;
+            break;
     }
 }
 
-function operacoes(){
-    let n1=21;
-    let n2=67;
+function operacoes() {
+    let n1 = 21;
+    let n2 = 67;
 
-    alert("Diferença: "+(n2-n1));
-    alert("O dobro da primeira somado ao triplo da segunda: "+((n1*2)+(n2*3)));
-    alert("Multiplicação: "+(n1*n2));
+    alert("Diferença: " + (n2 - n1));
+    alert("O dobro da primeira somado ao triplo da segunda: " + ((n1 * 2) + (n2 * 3)));
+    alert("Multiplicação: " + (n1 * n2));
 }
 
-function ordenacao_numeros(){
-    let n1=67;
-    let n2=21;
+function ordenacao_numeros() {
+    let n1 = 67;
+    let n2 = 21;
 
-    if(n1>n2){
-        alert("Ordem decrescente: "+n1+", "+n2);
-    }else{
-        alert("Ordem decrescente: "+n2+", "+n1);
+    if (n1 > n2) {
+        alert("Ordem decrescente: " + n1 + ", " + n2);
+    } else {
+        alert("Ordem decrescente: " + n2 + ", " + n1);
     }
 }
+
+function folha_pagamento() {
+    let nome = prompt("Informe seu nome: ");
+    let sal_bruto = parseFloat(prompt("Informe seu salário bruto: "));
+    
+    alert("Nome do funcionário: "+nome);
+    alert("Salário bruto: R$"+sal_bruto);
+    alert("Desconto do INSS: R$"+(sal_bruto*0.08));
+    alert("Salário líquido: R$"+(sal_bruto-(sal_bruto*0.08)));
+}
+folha_pagamento();
