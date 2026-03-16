@@ -118,3 +118,39 @@ function verifica_letra(){
         alert("Sua letra é uma consoante!");
     }
 }
+
+function sistema_picoles(){
+    let escolha;
+
+    escolha=prompt("Selecione o sabor da sua preferência:\nA - Chocolate\nB - Morango\nC - Creme\nD - Manga\nE - Melancia\nF - Vanilla Ice\nG - Céu Azul\nH - Brownie\nI - Hawaiano");
+    
+    switch(escolha){
+        case "A":
+            alert("Preço: R$1,50")
+        break;
+        case "B":
+            alert("Preço: R$2,50");
+        break;
+        case "C":
+            alert("Preço: R$2,50");
+        break;
+        case "D":
+            alert("Preço: R$3,20");
+        break;
+        case "E":
+            alert("Preço: R$3,40");
+        break;
+        case "F":
+            alert("Preço: R$3,00");
+        break;
+        case "G":
+            alert("Preço: R$3,60");
+        break;
+        case "H":
+            alert("Preço: R$4,00");
+        break;
+        case "I":
+            alert("Preço: R$5,00");
+        break;
+    }
+}
