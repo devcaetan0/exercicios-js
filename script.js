@@ -106,3 +106,15 @@ function transformar_numero(){
         alert("O número que tu escolheu era ímpar, mas vou deixar ele par: "+numero);
     }
 }
+
+function verifica_letra(){
+    let letra;
+
+    letra=prompt("Informe uma letra");
+
+    if(letra=="A" || letra=="E" || letra=="I" || letra=="O" || letra=="U"){
+        alert("Sua letra é uma vogal!");
+    }else{
+        alert("Sua letra é uma consoante!");
+    }
+}
