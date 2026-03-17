@@ -178,10 +178,30 @@ function ordenacao_numeros() {
 function folha_pagamento() {
     let nome = prompt("Informe seu nome: ");
     let sal_bruto = parseFloat(prompt("Informe seu salário bruto: "));
-    
-    alert("Nome do funcionário: "+nome);
-    alert("Salário bruto: R$"+sal_bruto);
-    alert("Desconto do INSS: R$"+(sal_bruto*0.08));
-    alert("Salário líquido: R$"+(sal_bruto-(sal_bruto*0.08)));
+
+    alert("Nome do funcionário: " + nome);
+    alert("Salário bruto: R$" + sal_bruto);
+    alert("Desconto do INSS: R$" + (sal_bruto * 0.08));
+    alert("Salário líquido: R$" + (sal_bruto - (sal_bruto * 0.08)));
 }
-folha_pagamento();
+
+function pagamento_desconto() {
+    let nome = prompt("Informe seu nome: ");
+    let sal_bruto = parseFloat(prompt("Informe seu salário bruto: "));
+    let desconto;
+
+    if (sal_bruto <= 1000) {
+        desconto = 0.08;
+    } else if (sal_bruto <= 1500) {
+        desconto = 0.085;
+    } else {
+        desconto = 0.09;
+    }
+
+    alert("Nome do funcionário: " + nome);
+    alert("Salário bruto: R$" + sal_bruto);
+    alert("Taxa aplicada: " + (desconto * 100) + "%");
+    alert("Desconto do INSS: R$" + (sal_bruto * desconto));
+    alert("Salário líquido: R$" + (sal_bruto - (sal_bruto * desconto)));
+}
+pagamento_desconto();
