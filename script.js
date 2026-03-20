@@ -63,9 +63,15 @@ function calculo_financeiro() {
     alert("Ganho bruto anual: R$" + soma_ganhos);
     alert("Gasto anual: R$" + soma_gastos);
     alert("Saldo anual: R$" + saldo);
+
+    if (saldo > 0) {
+        alert("Parabéns, você teve lucro!");
+    } else {
+        alert("Sinto muito, você teve prejuízo!");
+    }
 }
 
-function ordenacao_inteiros() {
+function ordenacao_int() {
     let numeros = [];
     let aux;
     let trocou;
@@ -93,7 +99,7 @@ function ordenacao_inteiros() {
     }
 }
 
-function transformar_numero() {
+function transformar_num() {
     let numero;
 
     numero = parseFloat(prompt("Digite um número inteiro:"));
@@ -107,7 +113,7 @@ function transformar_numero() {
     }
 }
 
-function verifica_letra() {
+function verificar_letra() {
     let letra;
 
     letra = prompt("Informe uma letra");
@@ -164,7 +170,7 @@ function operacoes() {
     alert("Multiplicação: " + (n1 * n2));
 }
 
-function ordenacao_numeros() {
+function ordenacao_num() {
     let n1 = 67;
     let n2 = 21;
 
@@ -204,4 +210,3 @@ function pagamento_desconto() {
     alert("Desconto do INSS: R$" + (sal_bruto * desconto));
     alert("Salário líquido: R$" + (sal_bruto - (sal_bruto * desconto)));
 }
-pagamento_desconto();

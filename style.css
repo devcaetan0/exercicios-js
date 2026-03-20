@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(251, 252, 186);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    background-color: rgb(255, 235, 51);
+    color: rgb(0, 0, 0);
+    padding: 25px;
+    margin: 10px;
+    border-radius: 50px;
+    border: 5px black solid;
+}
+
+h1 {
+    margin: 25px;
+    background-color: rgb(255, 235, 51);
+    padding: 25px;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    border: 5px black solid;
+}
